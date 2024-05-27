@@ -6,13 +6,14 @@
 
     <depends>com.intellij.modules.platform</depends>
 
+    <depends>Git4Idea</depends>
     <resource-bundle>messages.MyBundle</resource-bundle>
 
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.kiiril.gitplugin.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
+        <toolWindow factoryClass="com.github.kiiril.gitplugin.ProfileToolWindowFactory"
+                    id="GitProfile"
+                    anchor="right"
+                    secondary="true"
+                    icon="AllIcons.General.User"/>
     </extensions>
-
-    <applicationListeners>
-        <listener class="com.github.kiiril.gitplugin.listeners.MyApplicationActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
-    </applicationListeners>
 </idea-plugin>
